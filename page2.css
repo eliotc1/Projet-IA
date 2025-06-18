@@ -1,0 +1,101 @@
+/* === Fond et style général === */
+body {
+  font-family: Arial, sans-serif; /* Police sans empattement */
+  margin: 20px; /* Marge autour de la page */
+  background: url('neuer.jpg') no-repeat center center fixed; /* Image de fond fixe */
+  background-size: cover; /* L'image couvre tout l'écran */
+  color: #000; /* Couleur du texte : noir */
+}
+
+/* === Titre principal === */
+h1 {
+  text-align: center; /* Centré horizontalement */
+  font-size: 3em; /* Très grande taille de texte */
+  background-color: rgba(255, 255, 255, 0.95); /* Fond blanc semi-transparent */
+  border: 3px solid #333; /* Bordure grise foncée */
+  padding: 20px; /* Espace interne */
+  border-radius: 15px; /* Coins arrondis */
+  width: fit-content; /* Largeur s'adapte au contenu */
+  margin: 30px auto; /* Centré automatiquement avec marges verticales */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* Ombre portée douce */
+}
+
+/* === Conteneur pour chaque gant + tableau === */
+.gants-container {
+  display: flex; /* Aligne l'image et le tableau côte à côte */
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Aligne verticalement */
+  margin-bottom: 40px; /* Espace sous chaque bloc */
+  gap: 40px; /* Espace entre l'image et le tableau */
+  flex-wrap: wrap; /* Permet de passer à la ligne sur petit écran */
+}
+
+/* === Style des images de gants === */
+.gants-container img {
+  width: 200px; /* Largeur fixe */
+  height: auto; /* Hauteur automatique selon proportions */
+  border: 2px solid #ccc; /* Bordure grise claire */
+  border-radius: 10px; /* Coins arrondis */
+  transition: transform 0.3s; /* Animation douce au survol */
+}
+
+/* === Effet au survol d’une image === */
+.gants-container img:hover {
+  transform: scale(1.05); /* Agrandit légèrement l’image */
+}
+
+/* === Style des tableaux === */
+table {
+  border-collapse: collapse; /* Fusion des bordures */
+  width: 400px; /* Largeur fixe */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* Ombre légère */
+  background-color: rgba(255, 255, 255, 0.95); /* Fond blanc semi-transparent */
+}
+
+/* === Cellules du tableau === */
+th, td {
+  border: 1px solid #ccc; /* Bordure fine et grise */
+  padding: 10px; /* Espace intérieur */
+  text-align: left; /* Alignement à gauche */
+}
+
+/* === En-têtes du tableau === */
+th {
+  background-color: #f4f4f4; /* Gris très clair */
+}
+
+/* === Conteneur des boutons de navigation === */
+.button-container {
+  display: flex; /* Aligne les boutons horizontalement */
+  justify-content: center; /* Centre les boutons */
+  gap: 20px; /* Espace entre les boutons */
+  margin: 60px 0 20px; /* Marges au-dessus et en dessous */
+  flex-wrap: wrap; /* Adaptation sur petits écrans */
+}
+
+/* === Style des boutons de navigation === */
+.nav-button {
+  padding: 12px 20px; /* Taille du bouton */
+  font-size: 16px;
+  border-radius: 8px; /* Coins arrondis */
+  cursor: pointer; /* Curseur de la souris */
+  background-color: #333; /* Fond sombre */
+  color: white; /* Texte blanc */
+  border: 1px solid white;
+  text-decoration: none; /* Pas de soulignement */
+  transition: background-color 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* === Effet hover sur les boutons === */
+.nav-button:hover {
+  background-color: #555; /* Change la couleur au survol */
+}
+
+/* === Icône flèche dans les boutons === */
+.nav-button .arrow {
+  font-size: 20px;
+}
+

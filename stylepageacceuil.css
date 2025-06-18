@@ -1,0 +1,75 @@
+/* === Style général du site === */
+body {
+  margin: 0; /* Enlève les marges par défaut du navigateur */
+  padding: 0; /* Enlève les espacements internes */
+  background-color: #fff; /* Fond blanc */
+  font-family: Arial, sans-serif; /* Police utilisée sur tout le site */
+  color: #000; /* Texte noir */
+}
+
+/* === Style du titre principal === */
+.title-accueil {
+  text-align: center; /* Centre le texte */
+  font-size: 3em; /* Taille du texte assez grande */
+  margin-top: 30px; /* Espace au-dessus du titre */
+  font-weight: bold; /* Texte en gras */
+  color: #000; /* Couleur du texte */
+}
+
+/* === Conteneur des blocs (Zorin et Gants) === */
+.accueil-container {
+  display: flex; /* Active le système de grille flexbox */
+  justify-content: center; /* Centre les blocs horizontalement */
+  align-items: stretch; /* Étire les blocs pour qu’ils aient la même hauteur */
+  height: 80vh; /* Hauteur du conteneur = 80% de la hauteur de la fenêtre */
+  gap: 30px; /* Espace entre les blocs */
+  padding: 40px; /* Espace intérieur */
+  flex-wrap: wrap; /* Les blocs passent à la ligne si l'écran est trop petit */
+}
+
+/* === Style de chaque bloc cliquable (carte) === */
+.bloc {
+  flex: 1; /* Chaque bloc prend le même espace */
+  text-align: center; /* Centre le contenu du bloc */
+  border: 3px solid #000; /* Bordure noire */
+  border-radius: 15px; /* Coins arrondis */
+  padding: 20px; /* Espace intérieur du bloc */
+  background-color: rgba(0, 0, 0, 0.05); /* Fond gris très clair */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Animation fluide au survol */
+  display: flex; /* Flexbox interne pour le contenu */
+  flex-direction: column; /* Organisation verticale du contenu */
+  justify-content: space-between; /* Espace équilibré entre les éléments */
+  max-width: 400px; /* Largeur maximale du bloc */
+  text-decoration: none; /* Enlève le soulignement des liens */
+  color: #000; /* Texte noir */
+}
+
+/* === Effet quand on passe la souris sur un bloc === */
+.bloc:hover {
+  transform: scale(1.05); /* Agrandit légèrement le bloc */
+  box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /* Ajoute une ombre portée */
+}
+
+/* === Style des images dans les blocs === */
+.bloc img {
+  height: 250px; /* Hauteur fixe de l’image */
+  width: 100%; /* Image prend toute la largeur disponible */
+  object-fit: cover; /* Coupe l’image proprement sans déformation */
+  border-radius: 10px; /* Coins arrondis pour l’image */
+  margin-bottom: 15px; /* Espace en dessous de l’image */
+}
+
+/* === Barre de séparation entre les deux blocs === */
+.separator {
+  display: flex; /* Flexbox pour bien aligner le symbole | */
+  align-items: center; /* Centre verticalement */
+  font-size: 3em; /* Grande taille */
+  font-weight: bold; /* Texte en gras */
+  color: #555; /* Couleur grise */
+}
+
+/* === Style général pour tous les liens <a> === */
+a {
+  text-decoration: none; /* Supprime le soulignement des liens */
+  color: inherit; /* Garde la couleur du texte définie ailleurs */
+}

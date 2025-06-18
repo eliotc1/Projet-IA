@@ -1,0 +1,107 @@
+/* Fond général et police */
+body {
+    background-color: lightblue;           /* Fond bleu clair */
+    font-family: Arial, sans-serif;        /* Police Arial */
+    margin: 20px;                          /* Marge extérieure de 20px */
+    padding-bottom: 100px;                 /* Espace en bas pour ne pas que le footer recouvre le contenu */
+}
+
+/* Footer fixe en bas avec bulle blanche centrée */
+footer {
+    position: fixed;                       /* Fixe le footer en bas même quand on scroll */
+    bottom: 20px;                         /* Décalage de 20px depuis le bas de la fenêtre */
+    left: 50%;                           /* Positionne horizontalement au milieu de la fenêtre */
+    transform: translateX(-50%);          /* Décale vers la gauche de 50% de sa propre largeur pour centrer parfaitement */
+    background-color: white;              /* Fond blanc identique au titre h1 */
+    border: 2px solid black;              /* Bordure noire épaisse de 2px */
+    padding: 12px 30px;                   /* Espace intérieur : 12px vertical, 30px horizontal */
+    border-radius: 10px;                  /* Coins arrondis avec un rayon de 10px (bords doux) */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Ombre portée sous la bulle pour effet de profondeur */
+    display: flex;                        /* Affiche les éléments enfants en ligne (flexbox) */
+    gap: 20px;                           /* Espace de 20px entre chaque enfant (boutons) */
+    z-index: 1000;                       /* Met le footer au premier plan, au-dessus des autres éléments */
+    user-select: none;                   /* Empêche la sélection de texte dans le footer (plus propre visuellement) */
+}
+
+/* Conteneur des boutons - flex centré */
+.button-container {
+    display: flex;                       /* Organise les boutons en ligne */
+    justify-content: center;             /* Centre horizontalement les boutons */
+    align-items: center;                 /* Centre verticalement les boutons dans la ligne */
+}
+
+/* Boutons avec style proche du titre (h1) */
+.nav-button {
+    background-color: white;             /* Fond blanc comme le footer et titre */
+    color: black;                        /* Texte noir */
+    border: 2px solid black;             /* Bordure noire de 2px, même style que le footer */
+    padding: 12px 25px;                  /* Espace intérieur du bouton : 12px haut/bas, 25px gauche/droite */
+    border-radius: 10px;                 /* Coins arrondis pour effet "bulle" */
+    font-weight: bold;                   /* Texte en gras */
+    font-size: 1rem;                     /* Taille de police normale (16px par défaut) */
+    text-decoration: none;               /* Supprime le soulignement des liens */
+    display: flex;                       /* Flex pour aligner l’icône et le texte dans le bouton */
+    align-items: center;                 /* Centre verticalement le contenu (icône + texte) */
+    gap: 8px;                           /* Espace de 8px entre l’icône et le texte */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Animation douce pour le changement de couleur au hover */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Ombre légère sous le bouton */
+}
+
+/* Hover : fond noir, texte blanc */
+.nav-button:hover {
+    background-color: black;             /* Change le fond en noir quand la souris passe dessus */
+    color: white;                        /* Texte devient blanc pour contraste */
+}
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    footer {
+        padding: 10px 20px;              /* Réduit les espacements internes sur petits écrans */
+        gap: 15px;                       /* Réduit l’espace entre les boutons */
+    }
+
+    .nav-button {
+        padding: 10px 18px;              /* Boutons plus petits sur petits écrans */
+        font-size: 0.9rem;               /* Taille de police légèrement réduite */
+    }
+}
+
+/* TITRE principal centré + encadré */
+h1 {
+    text-align: center;                  /* Centre le texte */
+    border: 2px solid black;             /* Bordure noire de 2px */
+    padding: 10px;                      /* Espace intérieur */
+    background-color: white;             /* Fond blanc */
+    border-radius: 10px;                 /* Coins arrondis */
+    width: fit-content;                  /* Largeur selon le contenu */
+    margin: auto;                       /* Centre horizontalement */
+}
+
+/* Sous-titres soulignés en noir */
+h2, h3, h4, h5, h6 {
+    text-decoration: underline;          /* Souligné */
+    text-decoration-color: black;        /* Couleur du soulignement noir */
+    color: #000;                        /* Texte noir */
+    margin-top: 30px;                   /* Marge au-dessus */
+}
+
+/* Tableaux avec bordures */
+table, th, td {
+    border: 1px solid black;             /* Bordures noires */
+    border-collapse: collapse;           /* Fusionne les bordures */
+    padding: 8px;                      /* Padding interne */
+    background-color: white;             /* Fond blanc */
+}
+
+/* Optionnel : centrer les tableaux */
+table {
+    margin: 20px auto;                  /* Marge en haut et bas + centré horizontalement */
+}
+
+/* Pour les images : centrer proprement si besoin */
+img {
+    display: block;                    /* Image en bloc */
+    margin: 10px auto;                 /* Centré avec marge verticale */
+    width: 50%;                       /* Largeur à 50% */
+    height: auto;                     /* Hauteur auto proportionnelle */
+}
